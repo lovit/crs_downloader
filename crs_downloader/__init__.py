@@ -1,4 +1,5 @@
-from .parser import parser
+from .downloader import download
+#from .parser import parser
 from .utils import save
 from .utils import now
 from .utils import get_soup
