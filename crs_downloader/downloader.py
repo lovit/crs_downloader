@@ -1,3 +1,4 @@
+import os
 import requests
 import time
 
@@ -91,3 +92,23 @@ def download_from_a_category(category_url, directory, sleep=0.1, debug=False):
         download(url, outpath)
         print('downloaded {} to {}'.format(url, outpath))
         time.sleep(sleep)
+
+def download_from_all_categories(directory, sleep=0.1, debug=False):
+    """
+    Arguments
+    ---------
+    directory : str
+        Directory path to save downloaded files
+    sleep : float
+        Sleep time for downloading a file.
+        Default is 0.1
+    debug : Boolean
+        If True, download onlt three files for each category
+    """
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    for _, category_url in category_links:
+        download_from_a_category(category_url, directory, sleep, debug)
+        print('done {}'.format(category_url), end='\n\n')
