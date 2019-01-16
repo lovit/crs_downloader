@@ -1,5 +1,5 @@
 from .downloader import download
-#from .parser import parser
+from .downloader import download_from_all_categories
 from .utils import save
 from .utils import now
 from .utils import get_soup

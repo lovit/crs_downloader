@@ -1,7 +1,12 @@
 import os
 import requests
 import time
+from .utils import get_soup
+import re
 
+
+url_base = 'https://fas.org/sgp/crs/'
+url_pattern = re.compile('[A-Z]+[0-9]+.pdf')
 
 category_links = [
     ('General National Security Topics', 'https://fas.org/sgp/crs/natsec/index.html'),
@@ -46,7 +51,9 @@ def download(url, fname):
         return False
 
 def parse_href(link):
-    href = link.attrs['href']
+    if not hasattr(link, 'attrs'):
+        return None
+    href = link.attrs.get('href', "")
     if url_pattern.match(href):
         return href
     return None
