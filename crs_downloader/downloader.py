@@ -13,7 +13,7 @@ category_links = [
     ('Nuclear Weapons and Arms Control', 'https://fas.org/sgp/crs/nuke/index.html'),
     ('Conventional Weapons Systems', 'https://fas.org/sgp/crs/weapons/index.html'),
     ('Terrorism', 'https://fas.org/sgp/crs/terror/index.html'),
-    ('Miscellaneous Topics' 'https://fas.org/sgp/crs/misc/index.html')
+    ('Miscellaneous Topics', 'https://fas.org/sgp/crs/misc/index.html')
 ]
 
 
