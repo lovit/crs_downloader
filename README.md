@@ -2,7 +2,7 @@
 
 Congressional Research Service Reports 에서 제공하는 pdf 형식의 reports 를 다운로드 받는 Python script 입니다.
 
-```python
+```
 python download.py --debug --directory ./output/ --sleep 1.0
 ```
 
