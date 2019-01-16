@@ -17,7 +17,7 @@ def main():
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-    download_from_all_categories(output, sleep, debug)
+    download_from_all_categories(directory, sleep, debug)
 
 if __name__ == '__main__':
     main()
